@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: quiz-client
-        image: kristosako/angular-quiz:v1
+        image: suadakoci/angular-frontend:v1
         resources:
           requests:
             cpu: 100m

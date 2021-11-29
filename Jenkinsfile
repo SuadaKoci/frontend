@@ -12,7 +12,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t SuadaKoci/frontend:v1 .'
+				sh 'docker build -t suadakoci/angular-frontend:v1 .'
 			}
 		}
 
@@ -26,7 +26,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push SuadaKoci/frontend:v1'
+				sh 'docker push suadakoci/angular-frontend:v1'
 			}
 		}
 

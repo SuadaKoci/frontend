@@ -12,7 +12,7 @@ pipeline{
 		stage('Login') {
 
 			steps {
-				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login --username foo --password-stdin'
+				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login --username --password-stdin'
 			}
 		}
         stage('Build') {

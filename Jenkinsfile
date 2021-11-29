@@ -6,15 +6,8 @@ pipeline{
 		DOCKERHUB_CREDENTIALS=credentials('docker_connect')
 
 	}
-
+    
 	stages {
-
-		stage('Build') {
-
-			steps {
-				sh 'docker build -t suadakoci/angular-frontend:v1 .'
-			}
-		}
 
 		stage('Login') {
 
@@ -22,6 +15,13 @@ pipeline{
 				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u suadakoci --password-976b831c-7951-4289-88e3-fae395de019e'
 			}
 		}
+        stage('Build') {
+
+			steps {
+				sh 'docker build -t suadakoci/angular-frontend:v1 .'
+			}
+		}
+
 
 		stage('Push') {
 

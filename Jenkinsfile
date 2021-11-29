@@ -32,7 +32,7 @@ pipeline{
 
 		stage ('Kubernetis deploy'){
 			steps {
-					sh ("/usr/local/bin/kubectl -n quiz-client apply -f quiz-client.yml")
+					sh ("/usr/local/bin/kubectl  apply -f quiz-client.yml")
 				
 			}
 		}

@@ -3,7 +3,7 @@ pipeline{
 	agent any
 
 	environment {
-		DOCKERHUB_CREDENTIALS=credentials('docker_connect')
+		DOCKERHUB_CREDENTIALS=credentials('dockerhub login')
 
 	}
     
@@ -12,7 +12,7 @@ pipeline{
 		stage('Login') {
 
 			steps {
-				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u suadakoci --password-976b831c-7951-4289-88e3-fae395de019e'
+				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login --username=suadakoci --password=Jennahstojku12'
 			}
 		}
         stage('Build') {

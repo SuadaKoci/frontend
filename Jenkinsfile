@@ -12,7 +12,7 @@ pipeline{
 		stage('Login') {
 
 			steps {
-				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login --username:suadakoci --password=Jennastojku12'
+				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login --username=suadakoci --password=Jennastojku12'
 			}
 		}
         stage('Build') {

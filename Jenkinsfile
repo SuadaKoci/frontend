@@ -32,7 +32,7 @@ pipeline{
 
 		stage ('Kubernetes deploy'){
 			steps {
-        sh ("kubectl apply -f quiz-client.yml | -k /usr/local/bin/kubectl")
+        sh ("/usr/local/bin/kubectl apply -f quiz-client.yml")
 				
 			}
 		}
